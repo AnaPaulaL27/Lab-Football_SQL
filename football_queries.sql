@@ -34,11 +34,9 @@ How many different teams have played in matches recorded in a French division?
 -- ... 61. Note that count always neeeds bracket 
 
 
-
 Have Huddersfield played Swansea in the period covered?
 -- SOLUTION 7
 <!SELECT * FROM matches WHERE (hometeam = 'Huddersfield' AND awayteam= 'Swansea')
-
 
 
 How many draws were there in the Eredivisie between 2010 and 2015?
@@ -48,11 +46,9 @@ How many draws were there in the Eredivisie between 2010 and 2015?
 -- Alternatively:SELECT COUNT(ftr) FROM matches WHERE (ftr = 'D') AND (season BETWEEN 2010 AND 2015) AND division_code = 'N1';
 
 
-
 Select the matches played in the Premier League in order of total goals scored from highest to lowest. Where there is a tie the match with more home goals should come first.
 -- SOLUTION 9
 <!SELECT * FROM matches WHERE division_code= 'E0' ORDER BY (ftag + fthg) DESC, fthg DESC
-
 
 
 In which division and which season were the most goals scored?
